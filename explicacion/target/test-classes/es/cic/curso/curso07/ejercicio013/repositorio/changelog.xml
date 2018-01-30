@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+					xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+					http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+    <changeSet author="usuario (generated)" id="1400847488681-1">
+        <createTable catalogName="curso07" tableName="sala">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="numero_sala" type="INT(2)">
+            	<constraints unique="true"/>
+            </column>
+            <column name="capacidad" type="INT(4)"/>
+            <column name="ocupadas_sesion_1" type="INT(4)"/>
+            <column name="ocupadas_sesion_2" type="INT(4)"/>
+            <column name="ocupadas_sesion_3" type="INT(4)"/>
+        </createTable>
+        <createTable catalogName="curso07" tableName="venta">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="cuantas_entradas" type="INT(4)"/>
+            <column name="descuento" type="BOOLEAN"/>
+            <column name="salaId" type="INT(2)"/>
+            <column name="sesionId" type="INT(1)"/>
+            <column name="precio" type="DECIMAL(8,2)"/>
+        </createTable>  
+    </changeSet>
+</databaseChangeLog>

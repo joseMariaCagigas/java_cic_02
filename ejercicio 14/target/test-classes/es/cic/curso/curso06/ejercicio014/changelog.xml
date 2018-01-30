@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+					xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+					http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+    <changeSet author="usuario (generated)" id="1400847488681-1">
+        <createTable catalogName="curso06" tableName="VENTA">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="id_producto" type="INT(2)">
+            	<constraints unique="true"/>
+            </column>
+            <column name="cantidad" type="INT(4)"/>
+            <column name="importe" type="DECIMAL(8,2)"/>
+            
+        </createTable>
+        <createTable catalogName="curso06" tableName="PRODUCTO">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+
+            <column name="code" type="INT(3)"/>
+            <column name="nombre" type="VARCHAR(50)"/>
+            <column name="precio" type="DECIMAL(8,2)"/>
+            <column name="cantidad_stock" type="INT(3)"/>
+            <column name="cantidad_tienda" type="INT(3)"/>
+            <column name="cantidad_almacen" type="INT(3)"/>
+
+
+        </createTable>  
+    </changeSet>
+</databaseChangeLog>
