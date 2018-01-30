@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+					xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+					http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+    <changeSet author="usuario (generated)" id="1400847488681-1">
+
+       <createTable catalogName="curso06" tableName="ADMIN">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="NICK" type="VARCHAR(100)"></column>
+            <column name="PASSWORD" type="VARCHAR(100)"></column>
+            <column name="ADMINISTRADOR_ID" type="INT(10)"></column> 
+        </createTable>
+        
+            <createTable catalogName="curso06" tableName="ADMINISTRADOR">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+             <column name="NOMBRE" type="VARCHAR(100)"></column>  
+            <column name="APELLIDOS" type="VARCHAR(100)"></column>
+            <column name="DNI" type="VARCHAR(100)"></column>
+            <column name="CALLE" type="VARCHAR(100)"></column>  
+            <column name="CIUDAD" type="VARCHAR(100)"></column>
+            <column name="PROVINCIA" type="VARCHAR(100)"></column>
+            <column name="COMUNIDAD" type="VARCHAR(100)"></column>  
+            <column name="CODIGO_POSTAL" type="INT(10)"></column>
+            <column name="EMAIL" type="VARCHAR(100)"></column>            
+        </createTable>  
+        
+               <createTable catalogName="curso06" tableName="USER">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="NICK" type="VARCHAR(100)"></column>
+            <column name="PASSWORD" type="VARCHAR(100)"></column>
+            <column name="USUARIO_ID" type="INT(10)"></column> 
+        </createTable>  
+        
+            <createTable catalogName="curso06" tableName="USUARIO">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+             <column name="NOMBRE" type="VARCHAR(100)"></column>  
+            <column name="APELLIDOS" type="VARCHAR(100)"></column>
+            <column name="DNI" type="VARCHAR(100)"></column>
+            <column name="CALLE" type="VARCHAR(100)"></column>  
+            <column name="CIUDAD" type="VARCHAR(100)"></column>
+            <column name="PROVINCIA" type="VARCHAR(100)"></column>
+            <column name="COMUNIDAD" type="VARCHAR(100)"></column>  
+            <column name="CODIGO_POSTAL" type="INT(10)"></column>
+            <column name="EMAIL" type="VARCHAR(100)"></column>         
+        </createTable>  
+        
+            <createTable catalogName="curso06" tableName="CATEGORIA">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="NOMBRE" type="VARCHAR(100)"></column>
+            <column name="DESCRIPCION" type="VARCHAR(100)"></column> 
+        </createTable>
+        
+            <createTable catalogName="curso06" tableName="ESTADO">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="NOMBRE" type="VARCHAR(100)"></column>
+            <column name="DESCRIPCION" type="VARCHAR(100)"></column> 
+        </createTable>
+        
+           <createTable catalogName="curso06" tableName="PRODUCTO">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+             <column name="NOMBRE" type="VARCHAR(100)"></column>  
+            <column name="PRECIO_INICIAL" type="DECIMAL(8,2)"></column>
+            <column name="CANTIDAD" type="INT(2)"></column>
+            <column name="RESERVADO" type="BOOLEAN"></column>  
+            <column name="VENDIDO" type="BOOLEAN"></column>  
+            <column name="PRODUCTO_ID" type="INT(10)"></column>  
+            <column name="CATEGORIA_ID" type="INT(10)"></column> 
+            <column name="ESTADO_ID" type="INT(10)"></column> 
+            <column name="USUARIO_ID" type="INT(10)"></column>          
+        </createTable> 
+        
+        <addForeignKeyConstraint 
+        			constraintName="FK_ADMIN_ADMINISTRADOR_ID" 
+        			referencedTableName="ADMINISTRADOR" 
+        			baseColumnNames="ADMINISTRADOR_ID" 
+        			baseTableName="ADMIN" 
+        			referencedColumnNames="ID"/> 
+        </changeSet>
+        
+        <changeSet author="usuario (generated)" id="1400847488682-1">
+        <addForeignKeyConstraint 
+        			constraintName="FK_USER_USUARIO_ID" 
+        			referencedTableName="USUARIO" 
+        			baseColumnNames="USUARIO_ID" 
+        			baseTableName="USER" 
+        			referencedColumnNames="ID"/>   
+        </changeSet> 
+		
+        <changeSet author="usuario (generated)" id="1400847487682-1">
+        <addForeignKeyConstraint 
+        			constraintName="FK_PRODUCTO_CATEGORIA_ID" 
+        			referencedTableName="CATEGORIA" 
+        			baseColumnNames="CATEGORIA_ID" 
+        			baseTableName="PRODUCTO" 
+        			referencedColumnNames="ID"/>   
+        </changeSet> 
+        			
+ 		<changeSet author="usuario (generated)" id="1400847488672-1">
+      	<addForeignKeyConstraint 
+        			constraintName="FK_PRODUCTO_ESTADO_ID" 
+        			referencedTableName="ESTADO" 
+        			baseColumnNames="ESTADO_ID" 
+        			baseTableName="PRODUCTO" 
+        			referencedColumnNames="ID"/>   
+        </changeSet>
+        			
+        <changeSet author="usuario (generated)" id="1400847588672-1">
+      	<addForeignKeyConstraint 
+        			constraintName="FK_PRODUCTO_USUARIO_ID" 
+        			referencedTableName="USUARIO" 
+        			baseColumnNames="USUARIO_ID" 
+        			baseTableName="PRODUCTO" 
+        			referencedColumnNames="ID"/>   
+        </changeSet>
+        
+</databaseChangeLog>

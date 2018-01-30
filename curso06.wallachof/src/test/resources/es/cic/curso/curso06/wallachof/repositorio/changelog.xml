@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+					xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+					http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+    <changeSet author="usuario (generated)" id="1400847488681-1">
+        <createTable catalogName="curso06" tableName="usuario">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="nombre" type="VARCHAR(100)"></column>
+            <column name="apellidos" type="VARCHAR(100)"></column>
+            <column name="dni" type="VARCHAR(100)"></column>
+            <column name="coordenadas" type="VARCHAR(100)"></column> 
+            <column name="nick" type="VARCHAR(100)"></column>    
+            <column name="user_id" type="INT(10)"></column>
+            <column name="producto_id" type="INT(10)"></column>
+        </createTable>
+        
+        <createTable catalogName="curso06" tableName="administrador">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="nombre" type="VARCHAR(100)"></column>
+            <column name="apellidos" type="VARCHAR(100)"></column>
+            <column name="dni" type="VARCHAR(100)"></column>
+            <column name="calle" type="VARCHAR(100)"></column> 
+            <column name="ciudad" type="VARCHAR(100)"></column>  
+            <column name="provincia" type="VARCHAR(100)"></column>
+            <column name="comunidad" type="VARCHAR(100)"></column> 
+            <column name="cp" type="INT(5)"></column> 
+            <column name="admin_id" type="INT(10)"></column>
+        </createTable>
+        
+        <createTable catalogName="curso06" tableName="producto">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="nombre" type="VARCHAR(100)"></column>
+            <column name="precio" type="DECIMAL(8,2)"></column>
+            <column name="cantidad" type="INT(10)"></column>
+            <column name="estado" type="BOOLEAN"></column>  
+            <column name="categoria_id" type="INT(10)"></column>
+        </createTable>
+        
+           <createTable catalogName="curso06" tableName="login">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="user" type="VARCHAR(100)"></column>
+            <column name="password" type="VARCHAR(100)"></column>
+        </createTable>
+        
+            <createTable catalogName="curso06" tableName="admin">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="user" type="VARCHAR(100)"></column>
+            <column name="password" type="VARCHAR(100)"></column>
+        </createTable>
+        
+            <createTable catalogName="curso06" tableName="categoria">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="nombre" type="VARCHAR(100)"></column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

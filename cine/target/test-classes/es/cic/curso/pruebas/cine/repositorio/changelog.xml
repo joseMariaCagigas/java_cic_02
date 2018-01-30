@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+					xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+					http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+    <changeSet author="usuario (generated)" id="1400847488681-1">
+      <createTable catalogName="pruebas" tableName="sesion">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="asientosOcupados" type="INT(3)"/>
+            <column name="estaCerrada" type="BOOLEAN"/>
+            <column name="sala_id" type="INT(10)"/>
+        </createTable>
+        
+       <createTable catalogName="pruebas" tableName="sala">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="aforo" type="INT(3)"/>
+        </createTable>
+        
+       <createTable catalogName="pruebas" tableName="venta">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="sala_id" type="INT(3)"/>
+            <column name="sesion_id" type="INT(3)"/>
+            <column name="numEntradas" type="INT(3)"/>
+            <column name="importe" type="DECIMAL(8,2)"/>
+        </createTable>
+        
+		<addForeignKeyConstraint 
+        			constraintName="fk_sesion_sala_id" 
+        			referencedTableName="sala" 
+        			baseColumnNames="sala_id" 
+        			baseTableName="sesion" 
+        			referencedColumnNames="id"/>
+    </changeSet>
+    <!-- No olvidar sumar un id o cambiar numero -->
+	<changeSet author="usuario (generated)" id="1400847488682-1">
+        <addForeignKeyConstraint 
+        			constraintName="fk_venta_sesion_id" 
+        			referencedTableName="sesion" 
+        			baseColumnNames="sesion_id" 
+        			baseTableName="venta" 
+        			referencedColumnNames="id"/>       			
+    </changeSet>
+    <changeSet author="usuario (generated)" id="1400847488683-1">
+        <addForeignKeyConstraint 
+        			constraintName="fk_venta_sala_id" 
+        			referencedTableName="sala" 
+        			baseColumnNames="sala_id" 
+        			baseTableName="venta" 
+        			referencedColumnNames="id"/>       			
+    </changeSet>
+</databaseChangeLog>
