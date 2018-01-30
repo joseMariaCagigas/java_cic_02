@@ -1,5 +1,0 @@
-projectKey=C10-E023
-serverUrl=http://sonarqube:9000
-dashboardUrl=http://sonarqube:9000/dashboard/index/C10-E023
-ceTaskId=AVo7sb6jB9MSM7nPxmeZ
-ceTaskUrl=http://sonarqube:9000/api/ce/task?id=AVo7sb6jB9MSM7nPxmeZ
