@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+					xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+					http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+    <changeSet author="usuario (generated)" id="1400847488681-1">
+    <!-- ID, USER_LOGIN, USER_PASS, AGE from USERS  -->
+        <createTable catalogName="grupo1_ejercicio024" tableName="USERS">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="USER_LOGIN" type="VARCHAR(50)"/>
+            <column name="USER_PASS" type="VARCHAR(50)"/>
+            <column name="AGE" type="INT(2)"/>
+        </createTable>
+  
+    </changeSet>
+    
+</databaseChangeLog>
