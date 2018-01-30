@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+					xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+					http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+    <changeSet author="usuario (generated)" id="1400847488681-1">
+
+        <createTable catalogName="grupo3" tableName="venta">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="salaId" type="INTEGER(10)"/>
+            <column name="precio" type="FLOAT(3)"/>
+            <column name="cantidad" type="INT(4)"/> 
+            <column name="beneficio" type="FLOAT(4)"/>
+        </createTable>
+        
+         <createTable catalogName="grupo3" tableName="sala">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="numSala" type="INTEGER(10)"/>
+            <column name="asientosLibres" type="INTEGER(3)"/>
+            <column name="numSesion" type="INTEGER(1)"/>
+            <column name="cerrado" type="BOOLEAN"/>   
+        </createTable>
+        
+        <addForeignKeyConstraint 
+        			constraintName="fk_venta_sala_id" 
+        			referencedTableName="sala" 
+        			baseColumnNames="salaId" 
+        			baseTableName="venta" 
+        			referencedColumnNames="id"/>
+    </changeSet>
+</databaseChangeLog>

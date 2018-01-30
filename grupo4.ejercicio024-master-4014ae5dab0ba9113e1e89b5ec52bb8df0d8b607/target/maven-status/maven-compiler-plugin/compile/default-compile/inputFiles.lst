@@ -1,0 +1,16 @@
+/home/curso/workspace/Cine Vaadin/grupo4.ejercicio024-master-4014ae5dab0ba9113e1e89b5ec52bb8df0d8b607/src/main/java/es/cic/curso/grupo4/ejercicio024/servicio/GestionCineServiceImpl.java
+/home/curso/workspace/Cine Vaadin/grupo4.ejercicio024-master-4014ae5dab0ba9113e1e89b5ec52bb8df0d8b607/src/main/java/es/cic/curso/grupo4/ejercicio024/repositorio/Identificable.java
+/home/curso/workspace/Cine Vaadin/grupo4.ejercicio024-master-4014ae5dab0ba9113e1e89b5ec52bb8df0d8b607/src/main/java/es/cic/curso/grupo4/ejercicio024/repositorio/IRepository.java
+/home/curso/workspace/Cine Vaadin/grupo4.ejercicio024-master-4014ae5dab0ba9113e1e89b5ec52bb8df0d8b607/src/main/java/es/cic/curso/grupo4/ejercicio024/dominio/Sesion.java
+/home/curso/workspace/Cine Vaadin/grupo4.ejercicio024-master-4014ae5dab0ba9113e1e89b5ec52bb8df0d8b607/src/main/java/es/cic/curso/grupo4/ejercicio024/repositorio/AbstractRepositoryImpl.java
+/home/curso/workspace/Cine Vaadin/grupo4.ejercicio024-master-4014ae5dab0ba9113e1e89b5ec52bb8df0d8b607/src/main/java/es/cic/curso/grupo4/ejercicio024/repositorio/SalaRepositoryImpl.java
+/home/curso/workspace/Cine Vaadin/grupo4.ejercicio024-master-4014ae5dab0ba9113e1e89b5ec52bb8df0d8b607/src/main/java/es/cic/curso/grupo4/ejercicio024/dominio/Venta.java
+/home/curso/workspace/Cine Vaadin/grupo4.ejercicio024-master-4014ae5dab0ba9113e1e89b5ec52bb8df0d8b607/src/main/java/es/cic/curso/grupo4/ejercicio024/exceptions/VentaException.java
+/home/curso/workspace/Cine Vaadin/grupo4.ejercicio024-master-4014ae5dab0ba9113e1e89b5ec52bb8df0d8b607/src/main/java/es/cic/curso/grupo4/ejercicio024/repositorio/SesionRepositoryImpl.java
+/home/curso/workspace/Cine Vaadin/grupo4.ejercicio024-master-4014ae5dab0ba9113e1e89b5ec52bb8df0d8b607/src/main/java/es/cic/curso/grupo4/ejercicio024/servicio/GestionCineService.java
+/home/curso/workspace/Cine Vaadin/grupo4.ejercicio024-master-4014ae5dab0ba9113e1e89b5ec52bb8df0d8b607/src/main/java/es/cic/curso/grupo4/ejercicio024/dominio/Sala.java
+/home/curso/workspace/Cine Vaadin/grupo4.ejercicio024-master-4014ae5dab0ba9113e1e89b5ec52bb8df0d8b607/src/main/java/es/cic/curso/grupo4/ejercicio024/repositorio/SalaRepository.java
+/home/curso/workspace/Cine Vaadin/grupo4.ejercicio024-master-4014ae5dab0ba9113e1e89b5ec52bb8df0d8b607/src/main/java/es/cic/curso/grupo4/ejercicio024/repositorio/VentaRepository.java
+/home/curso/workspace/Cine Vaadin/grupo4.ejercicio024-master-4014ae5dab0ba9113e1e89b5ec52bb8df0d8b607/src/main/java/es/cic/curso/grupo4/ejercicio024/dominio/MyUI.java
+/home/curso/workspace/Cine Vaadin/grupo4.ejercicio024-master-4014ae5dab0ba9113e1e89b5ec52bb8df0d8b607/src/main/java/es/cic/curso/grupo4/ejercicio024/repositorio/SesionRepository.java
+/home/curso/workspace/Cine Vaadin/grupo4.ejercicio024-master-4014ae5dab0ba9113e1e89b5ec52bb8df0d8b607/src/main/java/es/cic/curso/grupo4/ejercicio024/repositorio/VentaRepositoryImpl.java

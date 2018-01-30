@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+					xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+					http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+    <changeSet author="usuario (generated)" id="1400847488681-1">
+ <createTable catalogName="grupo4" tableName="sala">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+                       
+            <column name="numSala" type="INT(10)"/>
+           
+            <column name="butacasTotales" type="INT(3)"/>
+            <column name="recaudacion" type="DECIMAL(8,2)"/>
+             
+        </createTable>
+        
+        <createTable catalogName="grupo4" tableName="sesion">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+             <column name= "nombreSala" type = "VARCHAR(60)"/>
+            <column name="numeSesion" type="INT(10)"/>
+             <column name="salaId" type="INT(10)"/>
+            <column name="butacasDisp" type="INT(3)"/>
+ 
+        </createTable>
+        <createTable catalogName="grupo4" tableName="venta">
+            <column autoIncrement="true" name="id" type="INT(10)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="cuantas_entradas" type="VARCHAR(30)"/>
+            <column name="salaId" type="INT(10)"/>
+            <column name="sesionId" type="INT(10)"/>
+            <column name="precio" type="DECIMAL(8,2)"/> 
+ 
+             <column name="descuento" type="BOOLEAN"/>  
+             <column name="esVenta" type="BOOLEAN"/> 
+             <column name="esDevolucion" type="BOOLEAN"/>
+             <column name="devuelta" type="BOOLEAN"/>
+ 
+             <column name="beneficios" type="DECIMAL(8,2)"/>          
+        </createTable> 
+        <addForeignKeyConstraint 
+        			constraintName="fk_sesion_id_sala" 
+        			referencedTableName="sala" 
+        			baseColumnNames="salaId" 
+        			baseTableName="sesion" 
+        			referencedColumnNames="id"/>
+    </changeSet> 
+    
+   <changeSet author="usuario (generated)" id="1400847488682-1">
+        <addForeignKeyConstraint 
+        			constraintName="fk_venta_id_sala" 
+        			referencedTableName="sala" 
+        			baseColumnNames="salaId" 
+        			baseTableName="venta" 
+        			referencedColumnNames="id"/>     			
+    </changeSet>
+    <changeSet author="usuario (generated)" id="1400847488683-1">
+        <addForeignKeyConstraint 
+        			constraintName="fk_venta_id_sesion" 
+        			referencedTableName="sesion" 
+        			baseColumnNames="sesionId" 
+        			baseTableName="venta" 
+        			referencedColumnNames="id"/>     			
+    </changeSet>
+</databaseChangeLog>
